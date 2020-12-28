@@ -37,6 +37,7 @@ export default class Blank extends React.Component {
         value={this.state.TextInput_5}
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
+      <Icon name="star" />
     </View>
   )
 }
@@ -46,5 +47,6 @@ const styles = StyleSheet.create({
   View_2: { flexDirection: "row" },
   View_3: {},
   View_4: {},
-  TextInput_5: {}
+  TextInput_5: {},
+  Icon_6: {}
 })

@@ -24,7 +24,11 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { TextInput_5: "" }
+  state = {
+    TextInput_5: "",
+    DateTimePicker_8: new Date("02/04/0008"),
+    CheckBox_9: true
+  }
 
   render = () => (
     <View>
@@ -39,6 +43,20 @@ export default class Blank extends React.Component {
       />
       <Icon name="star" />
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <DateTimePicker
+        showIcon={false}
+        date={this.state.DateTimePicker_8}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_8: selectedDate })
+        }
+      />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_9}
+        onPress={nextChecked => this.setState({ CheckBox_9: nextChecked })}
+      />
     </View>
   )
 }
@@ -50,5 +68,7 @@ const styles = StyleSheet.create({
   View_4: {},
   TextInput_5: {},
   Icon_6: {},
-  Button_7: {}
+  Button_7: {},
+  DateTimePicker_8: {},
+  CheckBox_9: {}
 })

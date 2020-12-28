@@ -26,16 +26,7 @@ export default class Blank extends React.Component {
 
   state = {}
 
-  render = () => (
-    <View>
-      <Slider
-        value={50}
-        minimumValue={0}
-        maximumValue={103}
-        style={styles.Slider_2}
-      />
-    </View>
-  )
+  render = () => <View />
 }
 
-const styles = StyleSheet.create({ View_1: {}, Slider_2: { width: 100 } })
+const styles = StyleSheet.create({ View_1: {} })

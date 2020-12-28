@@ -24,9 +24,39 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { TextInput_9: "" }
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <View>
+        <View>
+          <Image
+            source={{
+              uri:
+                "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/Hydrangeas_V5njDpn.jpg"
+            }}
+          />
+        </View>
+        <View>
+          <TextInput
+            placeholder="Number Input Placeholder"
+            keyboardType="numeric"
+            value={this.state.TextInput_9}
+            onChangeText={nextValue =>
+              this.setState({ TextInput_9: nextValue })
+            }
+          />
+        </View>
+      </View>
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({ View_1: {} })
+const styles = StyleSheet.create({
+  View_1: {},
+  View_2: {},
+  View_3: {},
+  Image_13: {},
+  View_4: {},
+  TextInput_9: {}
+})
